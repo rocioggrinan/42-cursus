@@ -25,8 +25,8 @@ int	ft_atoi(const char *str)
     }
 	return (sign * result);
 }
-int main ()
+/*int main ()
 {
     const char *str = 0;
     printf("return: %d\n", ft_atoi(str));
-}
+}*/
