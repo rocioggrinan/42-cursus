@@ -27,9 +27,7 @@ char* ft_strnstr(const char *haystack, const char *needle, size_t len)
                 l--;
             }
             if (needle[a] == '\0')
-            {
                 return ((char*)haystack);
-            }
         }
         haystack++;
         len--;
@@ -43,7 +41,7 @@ char* ft_strnstr(const char *haystack, const char *needle, size_t len)
     size_t len = 8;
 
     char *result = ft_strnstr(haystack, needle, len);
-    char result2 = strnstr(haystack, needle, len);
+    char *result2 = strnstr(haystack, needle, len);
 
     if (result)
     {

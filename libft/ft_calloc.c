@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 
 #include "libft.h"
 #include <stdlib.h>
@@ -25,3 +26,6 @@ void *ft_calloc(size_t nmemb, size_t size)
     free(array);
     return 0;
 }*/
+=======
+ft_calloc
+>>>>>>> Stashed changes
