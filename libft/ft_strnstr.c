@@ -37,7 +37,7 @@ char* ft_strnstr(const char *haystack, const char *needle, size_t len)
     return (0);
 }
 
-int main() {
+/*int main() {
     const char *haystack = "AEFABD";
     const char *needle = "EFA";
     size_t len = 8;
@@ -58,4 +58,4 @@ int main() {
         printf("2Return: (null)\n");
     }
     return 0;
-}
+}*/
