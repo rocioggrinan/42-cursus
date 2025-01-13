@@ -1,1 +1,4 @@
-ft_strdup
+char *strdup(const char *s)
+{
+    
+}

@@ -4,7 +4,7 @@
 void *ft_memcpy(void *dest, const void *src, size_t n)
 {
     size_t i;
-    unsigned char aux;
+    unsigned char *aux;
 
     i = 0;
     aux = (unsigned char *)dest;
