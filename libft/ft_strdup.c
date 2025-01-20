@@ -1,12 +1,12 @@
-
 #include "libft.h"
 #include <stdlib.h>
-char *strdup(const char *src)
+char *ft_strdup(const char *src)
 {
     int len;
     char    *tab;
     int i;
 
+    i = 0;
     len = ft_strlen((char *)src);
     tab = (char *)malloc(sizeof(char) * len + 1);
     if (tab == 0)
@@ -19,12 +19,9 @@ char *strdup(const char *src)
     }
     tab[i] = '\0';
     return (tab);
-    
-
-    
 }
 
-int main()
+/*int main()
 {
     const char *orig = "Hello friend";
     char *duplicada = strdup(orig);
@@ -40,4 +37,4 @@ int main()
         printf("error al duplicado. \n");
     }
     return 0;
-}
+}*/

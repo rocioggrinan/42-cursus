@@ -12,8 +12,7 @@ char *ft_strcpy(char *dest, char *src)
     }
     return (dest);
 }
-/*
-int main(void)
+/*int main(void)
 {
     char dest[] = "Casa";
     char src[] = "Pepe";
