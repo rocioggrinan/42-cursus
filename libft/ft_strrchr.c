@@ -17,8 +17,8 @@ char *ft_strrchr(const char *s, int c) {
 
 /*int main() {
     char *a = "navidad";
-    char *prt = ft_strrchr(a, 'z');
-    char *prt2 = strrchr(a, 'z');
+    char *prt = ft_strrchr(a, 'a');
+    char *prt2 = strrchr(a, 'a');
     printf("return:%s\n", prt);
     printf("return:%s\n", prt2);
     return 0;

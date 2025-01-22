@@ -8,8 +8,6 @@ char *ft_strjoin(char const *s1, char const *s2)
     int a;
     int c;
 
-
-    
     if (!s1 || !s2)
         return (NULL);
     a = ft_strlen (s1);
