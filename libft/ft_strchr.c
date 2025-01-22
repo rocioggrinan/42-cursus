@@ -14,11 +14,10 @@ char *ft_strchr(const char *s, int c) {
 
     return (NULL);
 }
-/*
-int main() {
+/*int main() {
     char *a = "navidad";
-    char *prt = ft_strchr(a, 'z');
-    char *prt2 = strchr(a, 'z');
+    char *prt = ft_strchr(a, 'a');
+    char *prt2 = strchr(a, 'a');
     printf("return2:%s\n", prt2);
     printf("return:%s\n", prt);
     return 0;
