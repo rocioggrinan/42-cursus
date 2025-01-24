@@ -20,6 +20,7 @@ LIB_SRC = ft_atoi.c\
 	ft_memmove.c\
 	ft_strdup.c\
 	ft_strlen.c\
+	ft_substr.c \
 	ft_strrchr.c
 
 
@@ -30,7 +31,7 @@ NC = \033[0m
 NAME = libft.a
 LIB_OBJ_DIR = objects
 LIB_OBJ = $(patsubst %.c, $(LIB_OBJ_DIR)/%.o, $(LIB_SRC))
-CC = cc
+CC = cc  
 all: $(NAME)
 	@echo "$(G)██████╗  ██████╗  ██████╗██╗ ██████╗ $(NC)"
 	@echo "$(G)██╔══██╗██╔═══██╗██╔════╝██║██╔═══██╗$(NC)"
