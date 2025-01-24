@@ -15,7 +15,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n)
 }
 
 
-int main() 
+/*int main() 
 {
     const char    s1[] = "123";
     const char    s2[] = "123";
@@ -25,4 +25,4 @@ int main()
     printf("Result: %d\n", ft_memcmp(s1, s2, n));
     printf("Result2: %d\n", memcmp(s1, s2, n));
     return (0);
-}
+}*/
