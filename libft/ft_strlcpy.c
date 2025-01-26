@@ -9,26 +9,31 @@
 /*   Updated: 2025-01-24 14:04:06 by rogarci2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
-#include <stdio.h>
+#include "libft.h"
 
-char *ft_strlcpy(char *dest, char *src)
+size_t ft_strlcpy(char *dest, const char *src, size_t size)
 {
-    int i;
+    size_t count;
+    size_t len;
 
-    i = 0;
-    while (dest[i] != '\0' && src[i] != '\0')
+    count = 0;
+    len = ft_strlen(src);
+    if (size > 0)
     {
-        dest[i] = src[i];
-        i++;
+        while (count < len && count < size - 1)
+        {
+            dest[count] = src[count];
+            count++;
+        }
+        dest[count] = '\0';
     }
-    return (dest);
+    return (len);
 }
 /*int main(void)
 {
-    char dest[] = "Casa";
-    char src[] = "Pepe";
+    char dest[5];
+    char src[50] = "Pepee";
 
-    printf("return: %s\n", (ft_strcpy(dest, src)));
+    printf("return: %zu\n", (ft_strlcpy(dest, src, 5)));
     return(0);
 }*/

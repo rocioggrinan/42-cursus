@@ -128,7 +128,7 @@ char **ft_split(char const *s, char c)
     }
     return 0;
 }*/
-int		main()
+/*int		main()
 {
 	const	char *string1 = "hola me llamo ismael";
 	char	c = ' '; 
@@ -145,4 +145,4 @@ int		main()
 	free(resultado);
 	
 	return 0; 
-}
+}*/
