@@ -1,37 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rogarci2 <rogarci2@student.42madrid.com>   #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-01-29 12:35:02 by rogarci2          #+#    #+#             */
-/*   Updated: 2025-01-29 12:35:02 by rogarci2         ###   ########.com      */
+/*   Created: 2025-01-29 12:33:33 by rogarci2          #+#    #+#             */
+/*   Updated: 2025-01-29 12:33:33 by rogarci2         ###   ########.com      */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	ft_putstr_fd(char *s, int fd)
 {
-	size_t	i;
+	int	a;
 
-	i = 0;
-	if (n == 0)
-		return (0);
-	while (s1[i] && s2[i] && s1[i] == s2[i] && i < n - 1)
-		i++;
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	a = 0;
+	while (s[a] != '\0')
+	{
+		write(fd, &s[a], 1);
+		a++;
+	}
 }
-
-/*int main()
+/*int main (void)
 {
-	const char    s1[] = "12z4";
-	const char    s2[] = "92h4";
-	size_t  n;
+	int fd;
+	char *s = "hola partdpa";
+	int a;
 
-	n = 5;
-	printf("Result: %d\n", ft_strncmp(s1, s2, n));
-	printf("Result2: %d\n", strncmp(s1, s2, n));
-	return (0);
+	fd = open("prueba.txt", O_RDWR, O_APPEND);
+	ft_putstr_fd(s, fd);
+	return(0);
 }*/
