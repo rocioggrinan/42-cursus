@@ -40,7 +40,7 @@ static int	ft_str_len(const char *s, char c)
 	return (count);
 }
 
-static void	*limpiar_split(char **str)
+static void	*clean_split(char **str)
 {
 	int	i;
 
@@ -74,7 +74,7 @@ char	**ft_split(char const *s, char c)
 		{
 			result[i] = ft_substr(s, 0, ft_str_c_len(s, c));
 			if (!result[i++])
-				return (limpiar_split(result));
+				return (clean_split(result));
 			s += ft_str_c_len(s, c);
 		}
 		else
