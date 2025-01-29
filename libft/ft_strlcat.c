@@ -14,23 +14,26 @@
 
 size_t	ft_strlcat(char *dest, const char *src, size_t n)
 {
-	int	a;
-	int	b;
+	size_t	destt;
+	size_t	srcc;
+	size_t	c;
 
-	a = 0;
-	while (dest[a] != '\0')
+	destt = 0;
+	while (destt < n && dest[destt] != '\0')
+		destt++;
+	srcc = 0;
+	while (src[srcc] != '\0')
+		srcc++;
+	if (destt == n)
+		return (n + srcc);
+	c = 0;
+	while (src[c] != '\0' && (destt + c) < (n - 1))
 	{
-		a++;
+		dest[destt + c] = src[c];
+		c++;
 	}
-	b = 0;
-	while (a < n)
-	{
-		dest[a] = src[b];
-		a++;
-		b++;
-	}
-	dest[a] = '\0';
-	return (a);
+	dest[destt + c] = '\0';
+	return (destt + srcc);
 }
 
 /*int main() {

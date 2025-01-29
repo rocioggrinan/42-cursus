@@ -21,6 +21,7 @@ static int	ft_str_c_len(const char *s, char c)
 		count++;
 	return (count);
 }
+
 static int	ft_str_len(const char *s, char c)
 {
 	int	count;
@@ -38,6 +39,7 @@ static int	ft_str_len(const char *s, char c)
 	}
 	return (count);
 }
+
 static void	*limpiar_split(char **str)
 {
 	int	i;
@@ -51,34 +53,32 @@ static void	*limpiar_split(char **str)
 	free(str);
 	return (NULL);
 }
+
 char	**ft_split(char const *s, char c)
 {
 	char	**result;
 	int		i;
-	int		j;
 	int		count;
-	int		len;
 
-	j = 0;
 	if (!s)
 		return (NULL);
 	count = ft_str_len(s, c);
-	result = (char **)malloc(sizeof(char *) * count + 1);
+	result = (char **)malloc(sizeof(char *) * (count + 1));
 	if (!result)
 		return (NULL);
 	result[count] = NULL;
 	i = 0;
-	while (s[count] != '\0')
+	while (*s)
 	{
-		if (s[i] != c)
+		if (*s != c)
 		{
 			result[i] = ft_substr(s, 0, ft_str_c_len(s, c));
-			if (!s[i++])
+			if (!result[i++])
 				return (limpiar_split(result));
 			s += ft_str_c_len(s, c);
 		}
 		else
-			i++;
+			s++;
 	}
 	return (result);
 }
