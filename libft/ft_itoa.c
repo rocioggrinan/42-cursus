@@ -19,16 +19,13 @@ char	*ft_itoa(int n)
 	int		d;
 	char	*c;
 
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
 	d = ft_len(n);
 	c = ft_calloc((d + 1), sizeof(char));
 	if (c == 0)
 		return (NULL);
 	c[d] = '\0';
-	if (n == -2147483648)
-	{
-		ft_strlcpy(c, "-2147483648", d + 1);
-		return (c);
-	}
 	if (n < 0)
 	{
 		c[0] = '-';
@@ -48,8 +45,6 @@ static int	ft_len(int n)
 	int	len;
 
 	len = 0;
-	if (n == -2147483648)
-		return (11);
 	if (n < 0)
 	{
 		len++;

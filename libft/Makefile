@@ -47,7 +47,7 @@ NC = \033[0m
 NAME = libft.a
 LIB_OBJ_DIR = objects
 LIB_OBJ = $(patsubst %.c, $(LIB_OBJ_DIR)/%.o, $(LIB_SRC))
-CC = cc  
+CC = cc  -Wall -Wextra -Werror -g
 all: $(NAME)
 	@echo "$(G)██████╗  ██████╗  ██████╗██╗ ██████╗ $(NC)"
 	@echo "$(G)██╔══██╗██╔═══██╗██╔════╝██║██╔═══██╗$(NC)"
