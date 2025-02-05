@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	a;
@@ -41,24 +42,17 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 }
 
 /*int main() {
-	const char *haystack = "AEFABD";
-	const char *needle = "EFA";
-	size_t len = 8;
+	const char *haystack = "AEFABD b";
+	const char *needle = "EAF";
+	size_t len = 4;
 
 	char *result = ft_strnstr(haystack, needle, len);
-	char *result2 = strnstr(haystack, needle, len);
 
 	if (result)
 	{
 		printf("Return: %s\n", result);
 	} else {
 		printf("Return: (null)\n");
-	}
-	if (result2)
-	{
-		printf("2Return: %s\n", result);
-	} else {
-		printf("2Return: (null)\n");
 	}
 	return (0);
 }*/

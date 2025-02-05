@@ -75,7 +75,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (1);
 	}
 
-	printf("Resultado de la concatenación: %s\n", result);
+	printf("return: %s\n", result);
 
 	free(result);
 
