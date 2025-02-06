@@ -38,6 +38,6 @@ int	ft_atoi(const char *str)
 }
 /*int main ()
 {
-	const char *str = 0;
+	const char *str = "-34jd";
 	printf("return: %d\n", ft_atoi(str));
 }*/
