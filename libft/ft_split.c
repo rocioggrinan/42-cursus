@@ -21,7 +21,6 @@ static int	ft_str_c_len(const char *s, char c)
 		count++;
 	return (count);
 }
-
 static int	ft_str_len(const char *s, char c)
 {
 	int	count;
@@ -39,7 +38,6 @@ static int	ft_str_len(const char *s, char c)
 	}
 	return (count);
 }
-
 static void	*clean_split(char **str)
 {
 	int	i;
@@ -53,7 +51,6 @@ static void	*clean_split(char **str)
 	free(str);
 	return (NULL);
 }
-
 char	**ft_split(char const *s, char c)
 {
 	char	**result;
